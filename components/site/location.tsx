@@ -7,21 +7,21 @@ export function Location() {
     <section id="contact" className="section-shell bg-[var(--color-cream)]">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-24 sm:px-8 md:py-32 lg:grid-cols-[0.8fr_1.2fr] lg:px-10">
         <div className="reveal">
-          <p className="eyebrow text-[var(--color-bordeaux)]">Contact</p>
-          <h2 className="mt-5 font-serif text-[clamp(3.8rem,7vw,7rem)] leading-[0.88] text-[var(--color-forest)]">
-            Come trovarci
+          <p className="eyebrow text-[var(--color-bordeaux)]">Contato</p>
+          <h2 className="mt-5 font-serif text-[clamp(2.3rem,4vw,4.2rem)] leading-[0.98] text-[var(--color-forest)]">
+            Como chegar
           </h2>
           <div className="mt-10 grid gap-7 text-base leading-7 text-[var(--color-muted)]">
             <div className="flex gap-4">
               <MapPin className="mt-1 h-5 w-5 shrink-0 text-[var(--color-bordeaux)]" />
               <p>
                 <strong className="font-bold text-[var(--color-ink)]">
-                  Casa Bellini
+                  Resto Cucina
                 </strong>
                 <br />
                 Via Toscana, 24
                 <br />
-                Milano, Italia
+                Milão, Itália
               </p>
             </div>
             <div className="flex gap-4">
@@ -33,16 +33,16 @@ export function Location() {
             <div className="flex gap-4">
               <Mail className="mt-1 h-5 w-5 shrink-0 text-[var(--color-bordeaux)]" />
               <a
-                href="mailto:ciao@casabellini.it"
+                href="mailto:ciao@restocucina.it"
                 className="transition hover:text-[var(--color-bordeaux)]"
               >
-                ciao@casabellini.it
+                ciao@restocucina.it
               </a>
             </div>
             <div className="flex gap-4">
               <Clock className="mt-1 h-5 w-5 shrink-0 text-[var(--color-bordeaux)]" />
               <p>
-                Tuesday - Sunday
+                Terça - Domingo
                 <br />
                 18:00 - 23:30
               </p>
@@ -73,18 +73,18 @@ export function Location() {
           <div className="absolute left-[56%] top-[42%] h-5 w-5 -translate-x-1/2 -translate-y-1/2 border-2 border-[var(--color-cream)] bg-[var(--color-bordeaux)] shadow-[0_0_0_12px_rgba(184,155,102,0.18)]" />
           <div className="relative z-10 flex h-full min-h-[452px] flex-col justify-between border border-[var(--color-cream)]/18 p-6 sm:p-8">
             <div>
-              <p className="eyebrow text-[var(--color-gold)]">Milano Centro</p>
-              <p className="mt-4 max-w-sm font-serif text-4xl leading-none">
-                A quiet corner for candlelight, pasta and Barolo.
+              <p className="eyebrow text-[var(--color-gold)]">Centro de Milão</p>
+              <p className="mt-4 max-w-sm font-serif text-3xl leading-tight">
+                Um canto tranquilo para luz de velas, massa e Barolo.
               </p>
             </div>
             <div className="max-w-sm bg-[var(--color-cream)] p-5 text-[var(--color-ink)]">
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--color-bordeaux)]">
-                Casa Bellini
+                Resto Cucina
               </p>
               <p className="mt-2 text-sm leading-6 text-[var(--color-muted)]">
-                Static map concept prepared for replacement with a real map
-                integration when credentials are available.
+                Mapa visual estático preparado para futura integração com mapa
+                real quando as credenciais estiverem disponíveis.
               </p>
             </div>
           </div>

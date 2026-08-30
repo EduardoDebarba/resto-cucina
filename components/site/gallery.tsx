@@ -5,6 +5,15 @@ import { useEffect, useState } from 'react';
 import { galleryItems } from '@/lib/site-content';
 import { SectionTitle } from './section-title';
 
+const tileClasses = [
+  'md:col-start-1 md:row-start-1 md:row-span-2',
+  'md:col-start-3 md:row-start-1 md:row-span-2',
+  'md:col-start-4 md:row-start-1',
+  'md:col-start-4 md:row-start-2',
+  'md:col-start-2 md:row-start-1',
+  'md:col-start-2 md:row-start-2',
+];
+
 export function Gallery() {
   const [active, setActive] = useState<(typeof galleryItems)[number] | null>(null);
 
@@ -28,16 +37,14 @@ export function Gallery() {
   return (
     <section id="gallery" className="section-shell bg-[var(--color-warm)]">
       <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 md:py-32 lg:px-10">
-        <SectionTitle label="Gallery" title="Momenti Bellini" align="center" />
+        <SectionTitle label="Galeria" title="Momentos Cucina" align="center" />
         <div className="mt-16 grid auto-rows-[190px] grid-cols-2 gap-3 sm:auto-rows-[230px] md:grid-cols-4 md:gap-5">
           {galleryItems.map((item, index) => (
             <button
               key={item.title}
               type="button"
               onClick={() => setActive(item)}
-              className={`group reveal relative overflow-hidden bg-[var(--color-forest)] text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-gold)] ${
-                index === 0 || index === 5 ? 'md:col-span-2 md:row-span-2' : ''
-              } ${index === 2 ? 'md:row-span-2' : ''}`}
+              className={`group reveal relative overflow-hidden bg-[var(--color-forest)] text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-gold)] ${tileClasses[index] ?? ''}`}
             >
               <img
                 src={item.image}
@@ -46,7 +53,7 @@ export function Gallery() {
                 loading="lazy"
               />
               <span className="absolute inset-0 bg-[linear-gradient(0deg,rgba(31,52,40,0.68),transparent_56%)] opacity-70 transition group-hover:opacity-95" />
-              <span className="absolute bottom-4 left-4 font-serif text-3xl text-[var(--color-cream)]">
+              <span className="absolute bottom-4 left-4 font-serif text-2xl text-[var(--color-cream)]">
                 {item.title}
               </span>
             </button>
@@ -63,7 +70,7 @@ export function Gallery() {
           <div className="relative w-full max-w-5xl">
             <button
               type="button"
-              aria-label="Close gallery image"
+              aria-label="Fechar imagem da galeria"
               onClick={() => setActive(null)}
               className="absolute -top-12 right-0 inline-flex h-10 w-10 items-center justify-center border border-[var(--color-cream)]/40 text-[var(--color-cream)] transition hover:bg-[var(--color-cream)] hover:text-[var(--color-ink)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-gold)]"
             >

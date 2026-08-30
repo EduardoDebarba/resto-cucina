@@ -5,12 +5,12 @@ import { useEffect, useState } from 'react';
 import { SiteButton } from './button';
 
 const navItems = [
-  { label: 'Home', href: '#home' },
-  { label: 'Il Ristorante', href: '#about' },
+  { label: 'Início', href: '#home' },
+  { label: 'O restaurante', href: '#about' },
   { label: 'Menu', href: '#menu' },
-  { label: 'La Nostra Storia', href: '#story' },
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Nossa história', href: '#story' },
+  { label: 'Galeria', href: '#gallery' },
+  { label: 'Contato', href: '#contact' },
 ];
 
 export function Header() {
@@ -33,15 +33,15 @@ export function Header() {
       }`}
     >
       <nav
-        aria-label="Main navigation"
+        aria-label="Navegação principal"
         className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10"
       >
         <a href="#home" className="group flex flex-col leading-none">
           <span className="font-serif text-3xl tracking-normal">
-            Casa Bellini
+            Resto Cucina
           </span>
           <span className="mt-1 text-[10px] font-bold uppercase tracking-[0.34em] text-current/70">
-            Cucina Italiana
+            Cozinha italiana
           </span>
         </a>
 
@@ -62,13 +62,13 @@ export function Header() {
             href="#reservations"
             variant={isScrolled ? 'secondary' : 'primary'}
           >
-            Prenota un Tavolo
+            Reservar uma mesa
           </SiteButton>
         </div>
 
         <button
           type="button"
-          aria-label={isOpen ? 'Close menu' : 'Open menu'}
+          aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
           aria-expanded={isOpen}
           onClick={() => setIsOpen((current) => !current)}
           className="inline-flex h-11 w-11 items-center justify-center border border-current/30 transition hover:bg-current/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-gold)] lg:hidden"
@@ -90,7 +90,7 @@ export function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-between py-2 font-serif text-3xl text-[var(--color-forest)]"
+                  className="flex items-center justify-between py-2 font-serif text-2xl text-[var(--color-forest)]"
                 >
                   {item.label}
                   <span className="h-px w-10 bg-[var(--color-gold)]" />
@@ -102,7 +102,7 @@ export function Header() {
                 className="mt-4 w-full"
                 onClick={() => setIsOpen(false)}
               >
-                Prenota un Tavolo
+                Reservar uma mesa
               </SiteButton>
             </div>
           </div>

@@ -19,7 +19,7 @@ export function SectionTitle({
         {label}
       </p>
       <h2
-        className={`mt-5 font-serif text-[clamp(3.2rem,7vw,6.8rem)] leading-[0.9] tracking-normal ${
+        className={`mt-5 font-serif text-[clamp(2.35rem,4.4vw,4.5rem)] leading-[0.98] tracking-normal ${
           light ? 'text-[var(--color-cream)]' : 'text-[var(--color-forest)]'
         } whitespace-pre-line`}
       >

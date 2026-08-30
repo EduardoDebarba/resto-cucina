@@ -189,6 +189,40 @@ body {
     animation-timeline: view();
     animation-range: entry 0% cover 28%;
   }
+
+  .menu-tabs-frame {
+    position: relative;
+  }
+
+  .menu-tabs-frame::before,
+  .menu-tabs-frame::after {
+    content: '';
+    height: calc(100% - 1px);
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 2rem;
+    z-index: 1;
+  }
+
+  .menu-tabs-frame::before {
+    background: linear-gradient(90deg, #fbf7ef 15%, rgba(251, 247, 239, 0));
+    left: 0;
+  }
+
+  .menu-tabs-frame::after {
+    background: linear-gradient(270deg, #fbf7ef 15%, rgba(251, 247, 239, 0));
+    right: 0;
+  }
+
+  .menu-tabs-scroll {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .menu-tabs-scroll::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @keyframes fade-up {

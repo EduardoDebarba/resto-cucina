@@ -18,17 +18,17 @@ export function Testimonials() {
         <div className="reveal relative mx-auto max-w-4xl text-center">
           <span
             aria-hidden="true"
-            className="font-serif text-[11rem] leading-none text-[var(--color-gold)]/28"
+            className="pointer-events-none absolute left-1/2 top-[-2.75rem] -translate-x-1/2 font-serif text-[6.5rem] leading-none text-[var(--color-gold)]/24"
           >
             &ldquo;
           </span>
-          <div className="-mt-16" aria-live="polite">
-            <div className="mb-8 flex justify-center gap-1 text-[var(--color-gold)]" aria-label="Five star rating">
+          <div className="relative pt-8" aria-live="polite">
+            <div className="mb-8 flex justify-center gap-1 text-[var(--color-gold)]" aria-label="Avaliacao de cinco estrelas">
               {Array.from({ length: 5 }).map((_, index) => (
                 <Star key={index} className="h-5 w-5 fill-current" />
               ))}
             </div>
-            <blockquote className="font-serif text-[clamp(3rem,6vw,6.2rem)] leading-[0.92] text-[var(--color-forest)]">
+            <blockquote className="font-serif text-[clamp(1.75rem,3.1vw,3.15rem)] leading-[1.1] text-[var(--color-forest)]">
               &ldquo;{current.quote}&rdquo;
             </blockquote>
             <p className="mt-8 text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--color-bordeaux)]">
@@ -41,7 +41,7 @@ export function Testimonials() {
         <div className="mt-12 flex items-center justify-center gap-4">
           <button
             type="button"
-            aria-label="Previous testimonial"
+            aria-label="Depoimento anterior"
             onClick={() => goTo(active - 1)}
             className="inline-flex h-11 w-11 items-center justify-center border border-[var(--color-forest)]/20 text-[var(--color-forest)] transition hover:bg-[var(--color-forest)] hover:text-[var(--color-cream)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-gold)]"
           >
@@ -52,7 +52,7 @@ export function Testimonials() {
               <button
                 key={testimonial.author}
                 type="button"
-                aria-label={`Show testimonial from ${testimonial.author}`}
+                aria-label={`Mostrar depoimento de ${testimonial.author}`}
                 aria-current={index === active}
                 onClick={() => goTo(index)}
                 className={`h-2.5 transition-all ${
@@ -65,7 +65,7 @@ export function Testimonials() {
           </div>
           <button
             type="button"
-            aria-label="Next testimonial"
+            aria-label="Proximo depoimento"
             onClick={() => goTo(active + 1)}
             className="inline-flex h-11 w-11 items-center justify-center border border-[var(--color-forest)]/20 text-[var(--color-forest)] transition hover:bg-[var(--color-forest)] hover:text-[var(--color-cream)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-gold)]"
           >

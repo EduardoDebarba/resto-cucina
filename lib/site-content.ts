@@ -1,6 +1,5 @@
 export const images = {
-  hero:
-    'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2400&q=85',
+  hero: '/hero-casa-bellini-clean.png',
   aboutChef:
     'https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1200&q=85',
   aboutPasta:
@@ -25,113 +24,125 @@ export const images = {
     'https://images.unsplash.com/photo-1568625365131-079e026a927d?auto=format&fit=crop&w=1000&q=85',
   romantic:
     'https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1200&q=85',
+  table:
+    'https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=85',
 };
 
 export const signatureDishes = [
   {
     name: 'Tagliatelle al Tartufo',
-    description: 'Fresh handmade pasta, parmesan and black truffle.',
+    description: 'Massa fresca artesanal, parmesão e trufa negra.',
     price: 'EUR 28',
     image: images.truffle,
-    alt: 'Handmade tagliatelle with parmesan and black truffle',
+    alt: 'Tagliatelle artesanal com parmesão e trufa negra',
   },
   {
     name: 'Risotto ai Funghi',
-    description: 'Carnaroli rice, porcini mushrooms and aged parmesan.',
+    description: 'Arroz carnaroli, cogumelos porcini e parmesão maturado.',
     price: 'EUR 24',
     image: images.risotto,
-    alt: 'Creamy mushroom risotto finished with parmesan',
+    alt: 'Risoto cremoso de cogumelos finalizado com parmesão',
   },
   {
     name: 'Branzino Mediterraneo',
-    description: 'Sea bass, roasted tomatoes, olives and fresh herbs.',
+    description: 'Robalo, tomates assados, azeitonas e ervas frescas.',
     price: 'EUR 32',
     image: images.branzino,
-    alt: 'Mediterranean sea bass with herbs and roasted vegetables',
+    alt: 'Robalo mediterrâneo com ervas e legumes assados',
   },
 ];
 
 export const menuCategories = [
   {
-    name: 'Antipasti',
+    name: 'Entradas',
     dishes: [
-      ['Burrata Pugliese', 'Heirloom tomatoes, basil oil and sea salt.', 'EUR 16'],
-      ['Carciofi alla Romana', 'Braised artichokes, mint and lemon zest.', 'EUR 14'],
-      ['Vitello Tonnato', 'Slow-cooked veal, tuna sauce and capers.', 'EUR 18'],
-      ['Fiori di Zucca', 'Zucchini blossoms, ricotta and anchovy.', 'EUR 15'],
-      ['Crudo di Branzino', 'Sea bass, citrus, olive oil and fennel.', 'EUR 19'],
-      ['Olive Ascolane', 'Stuffed olives with rosemary aioli.', 'EUR 12'],
+      ['Burrata Pugliese', 'Tomates heirloom, azeite de manjericão e sal marinho.', 'EUR 16'],
+      ['Carciofi alla Romana', 'Alcachofras braseadas, hortelã e raspas de limão.', 'EUR 14'],
+      ['Vitello Tonnato', 'Vitela cozida lentamente, molho de atum e alcaparras.', 'EUR 18'],
+      ['Fiori di Zucca', 'Flores de abobrinha, ricota e anchova.', 'EUR 15'],
+      ['Crudo di Branzino', 'Robalo, cítricos, azeite de oliva e funcho.', 'EUR 19'],
+      ['Olive Ascolane', 'Azeitonas recheadas com aioli de alecrim.', 'EUR 12'],
     ],
   },
   {
-    name: 'Pasta',
+    name: 'Massas',
     dishes: [
-      ['Tagliatelle al Tartufo', 'Handmade pasta, parmesan and black truffle.', 'EUR 28'],
-      ['Tortelli di Zucca', 'Pumpkin tortelli, sage butter and amaretti.', 'EUR 24'],
-      ['Pappardelle al Ragu', 'Slow-braised beef ragu and pecorino.', 'EUR 26'],
-      ['Spaghetti alle Vongole', 'Clams, white wine, garlic and parsley.', 'EUR 25'],
-      ['Gnocchi Sorrentina', 'Tomato, basil and smoked mozzarella.', 'EUR 21'],
-      ['Cacio e Pepe', 'Tonnarelli, pecorino romano and black pepper.', 'EUR 20'],
+      ['Tagliatelle al Tartufo', 'Massa artesanal, parmesão e trufa negra.', 'EUR 28'],
+      ['Tortelli di Zucca', 'Tortelli de abóbora, manteiga de sálvia e amaretti.', 'EUR 24'],
+      ['Pappardelle al Ragu', 'Ragu bovino braseado lentamente e pecorino.', 'EUR 26'],
+      ['Spaghetti alle Vongole', 'Vongoles, vinho branco, alho e salsa.', 'EUR 25'],
+      ['Gnocchi Sorrentina', 'Tomate, manjericão e mozzarella defumada.', 'EUR 21'],
+      ['Cacio e Pepe', 'Tonnarelli, pecorino romano e pimenta-do-reino.', 'EUR 20'],
     ],
   },
   {
-    name: 'Secondi',
+    name: 'Principais',
     dishes: [
-      ['Branzino Mediterraneo', 'Sea bass, tomatoes, olives and fresh herbs.', 'EUR 32'],
-      ['Bistecca Fiorentina', 'Charcoal-grilled T-bone, rosemary and sea salt.', 'EUR 58'],
-      ['Pollo al Limone', 'Organic chicken, lemon, thyme and white wine.', 'EUR 29'],
-      ['Osso Buco Milanese', 'Veal shank, saffron risotto and gremolata.', 'EUR 38'],
-      ['Melanzane Ripiene', 'Roasted eggplant, herbs and smoked provola.', 'EUR 24'],
-      ['Costolette d Agnello', 'Lamb chops, olives and seasonal greens.', 'EUR 36'],
+      ['Branzino Mediterraneo', 'Robalo, tomates, azeitonas e ervas frescas.', 'EUR 32'],
+      ['Bistecca Fiorentina', 'T-bone na brasa, alecrim e sal marinho.', 'EUR 58'],
+      ['Pollo al Limone', 'Frango orgânico, limão, tomilho e vinho branco.', 'EUR 29'],
+      ['Osso Buco Milanese', 'Ossobuco de vitela, risoto de açafrão e gremolata.', 'EUR 38'],
+      ['Melanzane Ripiene', 'Berinjela assada, ervas e provola defumada.', 'EUR 24'],
+      ['Costolette d Agnello', 'Costeletas de cordeiro, azeitonas e folhas da estação.', 'EUR 36'],
     ],
   },
   {
-    name: 'Dolci',
+    name: 'Sobremesas',
     dishes: [
-      ['Tiramisu Classico', 'Mascarpone, espresso and cocoa.', 'EUR 12'],
-      ['Panna Cotta', 'Vanilla cream, berries and aged balsamic.', 'EUR 11'],
-      ['Cannoli Siciliani', 'Ricotta, pistachio and candied orange.', 'EUR 12'],
-      ['Torta Caprese', 'Chocolate, almond and whipped cream.', 'EUR 13'],
-      ['Affogato Bellini', 'Fior di latte gelato and espresso.', 'EUR 9'],
-      ['Gelati Artigianali', 'Three seasonal house-made gelati.', 'EUR 10'],
+      ['Tiramisu Classico', 'Mascarpone, espresso e cacau.', 'EUR 12'],
+      ['Panna Cotta', 'Creme de baunilha, frutas vermelhas e balsâmico maturado.', 'EUR 11'],
+      ['Cannoli Siciliani', 'Ricota, pistache e laranja cristalizada.', 'EUR 12'],
+      ['Torta Caprese', 'Chocolate, amêndoas e creme batido.', 'EUR 13'],
+      ['Affogato Cucina', 'Gelato fior di latte e espresso.', 'EUR 9'],
+      ['Gelati Artigianali', 'Três gelatos artesanais da estação.', 'EUR 10'],
     ],
   },
   {
-    name: 'Vini',
+    name: 'Vinhos',
     dishes: [
-      ['Barolo, Piemonte', 'Structured nebbiolo with rose and spice.', 'EUR 18'],
-      ['Chianti Classico', 'Sangiovese, cherry, herbs and cedar.', 'EUR 14'],
-      ['Vermentino di Sardegna', 'Mineral white with citrus and salinity.', 'EUR 13'],
-      ['Franciacorta Brut', 'Elegant metodo classico bubbles.', 'EUR 16'],
-      ['Etna Rosso', 'Nerello mascalese from volcanic soils.', 'EUR 15'],
-      ['Vin Santo', 'Tuscan dessert wine with almond notes.', 'EUR 12'],
+      ['Barolo, Piemonte', 'Nebbiolo estruturado com notas de rosa e especiarias.', 'EUR 18'],
+      ['Chianti Classico', 'Sangiovese com cereja, ervas e cedro.', 'EUR 14'],
+      ['Vermentino di Sardegna', 'Branco mineral com cítricos e salinidade.', 'EUR 13'],
+      ['Franciacorta Brut', 'Borbulhas elegantes pelo método clássico.', 'EUR 16'],
+      ['Etna Rosso', 'Nerello mascalese de solos vulcânicos.', 'EUR 15'],
+      ['Vin Santo', 'Vinho de sobremesa toscano com notas de amêndoa.', 'EUR 12'],
     ],
   },
 ];
 
 export const galleryItems = [
-  { title: 'Pasta fatta a mano', image: images.aboutPasta, alt: 'Fresh handmade pasta dusted with flour' },
-  { title: 'Calice di vino', image: images.wine, alt: 'Red wine poured into a crystal glass' },
-  { title: 'Sala Bellini', image: images.interior, alt: 'Sophisticated restaurant interior with warm lighting' },
-  { title: 'Chef al lavoro', image: images.chef, alt: 'Chef plating a refined dish in the kitchen' },
-  { title: 'Tiramisu', image: images.tiramisu, alt: 'Classic tiramisu dessert served elegantly' },
-  { title: 'Cena romantica', image: images.romantic, alt: 'Romantic candlelit dinner table' },
+  { title: 'Massa feita à mão', image: images.aboutPasta, alt: 'Massa artesanal fresca polvilhada com farinha' },
+  { title: 'Sala Cucina', image: images.interior, alt: 'Interior sofisticado de restaurante com luz quente' },
+  { title: 'Tiramisu', image: images.tiramisu, alt: 'Tiramisu clássico servido de forma elegante' },
+  { title: 'Mesa mediterrânea', image: images.table, alt: 'Mesa italiana elegante com pratos mediterrâneos e vinho' },
+  { title: 'Taça de vinho', image: images.wine, alt: 'Vinho tinto servido em uma taça de cristal' },
+  { title: 'Chef em ação', image: images.chef, alt: 'Chef finalizando um prato refinado na cozinha' },
 ];
 
 export const testimonials = [
   {
-    quote: 'One of those places where every detail feels authentically Italian.',
+    quote: 'Um daqueles lugares em que cada detalhe parece autenticamente italiano.',
     author: 'Sofia Romano',
-    role: 'Food writer',
+    role: 'Crítica gastronômica',
   },
   {
-    quote: 'The handmade pasta has the quiet confidence of a family recipe perfected over decades.',
+    quote: 'A massa artesanal tem a confiança serena de uma receita familiar aperfeiçoada por décadas.',
     author: 'Luca Ferri',
     role: 'Sommelier',
   },
   {
-    quote: 'Warm, cinematic and deeply memorable. Casa Bellini turns dinner into a ritual.',
+    quote: 'Acolhedor, cinematográfico e profundamente memorável. O Resto Cucina transforma o jantar em ritual.',
     author: 'Elena Conti',
-    role: 'Guest',
+    role: 'Cliente',
+  },
+  {
+    quote: 'Serviço preciso, vinho impecável e pratos que chegam à mesa com alma de trattoria elegante.',
+    author: 'Marco Bellandi',
+    role: 'Cliente',
+  },
+  {
+    quote: 'A luz, o aroma do forno e o cuidado da equipe fazem a noite parecer uma pequena viagem à Itália.',
+    author: 'Camila Moretti',
+    role: 'Cliente',
   },
 ];

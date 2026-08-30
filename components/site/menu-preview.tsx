@@ -17,30 +17,32 @@ export function MenuPreview() {
       <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 md:py-32 lg:px-10">
         <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
           <SectionTitle
-            label="Il Nostro Menu"
-            title="Made with simplicity, served with soul."
+            label="Nosso Menu"
+            title="Feito com simplicidade, servido com alma."
           />
-          <div
-            className="flex overflow-x-auto border-b border-[var(--color-forest)]/15 pb-2 lg:max-w-xl"
-            role="tablist"
-            aria-label="Menu categories"
-          >
-            {menuCategories.map((category) => (
-              <button
-                key={category.name}
-                type="button"
-                role="tab"
-                aria-selected={category.name === active}
-                onClick={() => setActive(category.name)}
-                className={`shrink-0 px-4 py-3 text-[11px] font-bold uppercase tracking-[0.16em] transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-gold)] ${
-                  category.name === active
-                    ? 'text-[var(--color-bordeaux)]'
-                    : 'text-[var(--color-muted)] hover:text-[var(--color-forest)]'
-                }`}
-              >
-                {category.name}
-              </button>
-            ))}
+          <div className="menu-tabs-frame lg:max-w-xl">
+            <div
+              className="menu-tabs-scroll flex overflow-x-auto border-b border-[var(--color-forest)]/15"
+              role="tablist"
+              aria-label="Categorias do menu"
+            >
+              {menuCategories.map((category) => (
+                <button
+                  key={category.name}
+                  type="button"
+                  role="tab"
+                  aria-selected={category.name === active}
+                  onClick={() => setActive(category.name)}
+                  className={`shrink-0 px-4 py-3 text-[11px] font-bold uppercase tracking-[0.16em] transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-gold)] ${
+                    category.name === active
+                      ? 'text-[var(--color-bordeaux)]'
+                      : 'text-[var(--color-muted)] hover:text-[var(--color-forest)]'
+                  }`}
+                >
+                  {category.name}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -55,14 +57,14 @@ export function MenuPreview() {
               className="grid grid-cols-[1fr_auto] gap-5 border-b border-[var(--color-forest)]/13 py-7"
             >
               <div>
-                <h3 className="font-serif text-3xl leading-none text-[var(--color-forest)]">
+                <h3 className="font-serif text-2xl leading-none text-[var(--color-forest)]">
                   {name}
                 </h3>
                 <p className="mt-2 max-w-md text-sm leading-6 text-[var(--color-muted)]">
                   {description}
                 </p>
               </div>
-              <p className="font-serif text-2xl text-[var(--color-bordeaux)]">
+              <p className="font-serif text-xl text-[var(--color-bordeaux)]">
                 {price}
               </p>
             </article>
@@ -71,7 +73,7 @@ export function MenuPreview() {
 
         <div className="mt-12 flex justify-center">
           <SiteButton href="#reservations" variant="secondary">
-            View Full Menu
+            Ver menu completo
           </SiteButton>
         </div>
       </div>

@@ -15,27 +15,27 @@ const manrope = Manrope({
 
 
 export const metadata: Metadata = {
-  title: 'Casa Bellini | Authentic Italian Cuisine',
+  title: 'Resto Cucina | Cozinha italiana autêntica',
   description:
-    'Experience authentic Italian cuisine, handmade pasta and timeless hospitality at Casa Bellini.',
+    'Viva a cozinha italiana autêntica, massas artesanais e uma hospitalidade atemporal no Resto Cucina.',
   openGraph: {
-    title: 'Casa Bellini | Authentic Italian Cuisine',
+    title: 'Resto Cucina | Cozinha italiana autêntica',
     description:
-      'Experience authentic Italian cuisine, handmade pasta and timeless hospitality at Casa Bellini.',
+      'Viva a cozinha italiana autêntica, massas artesanais e uma hospitalidade atemporal no Resto Cucina.',
     images: [
       {
         url: '/og.png',
         width: 1600,
         height: 900,
-        alt: 'Casa Bellini social preview with pasta, wine and candlelight',
+        alt: 'Preview social do Resto Cucina com massa, vinho e luz de velas',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Casa Bellini | Authentic Italian Cuisine',
+    title: 'Resto Cucina | Cozinha italiana autêntica',
     description:
-      'Experience authentic Italian cuisine, handmade pasta and timeless hospitality at Casa Bellini.',
+      'Viva a cozinha italiana autêntica, massas artesanais e uma hospitalidade atemporal no Resto Cucina.',
     images: ['/og.png'],
   },
 };
@@ -46,7 +46,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body className={`${cormorant.variable} ${manrope.variable} antialiased`}>
         {children}
       </body>

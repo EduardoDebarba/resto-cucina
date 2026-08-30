@@ -7,13 +7,13 @@ export function SignatureDishes() {
       <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 md:py-32 lg:px-10">
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <SectionTitle
-            label="Dal Nostro Menu"
-            title="Sapori della Casa"
-            kicker="Our signature dishes"
+            label="Do nosso menu"
+            title="Sabores da Casa"
+            kicker="Nossos pratos assinatura"
           />
           <p className="max-w-sm text-base leading-7 text-[var(--color-muted)]">
-            Three signatures that speak in a soft Italian accent: handmade,
-            seasonal and finished with restraint.
+            Três criações da casa com alma italiana: artesanais, sazonais e
+            finalizadas com elegância.
           </p>
         </div>
 
@@ -35,14 +35,14 @@ export function SignatureDishes() {
               </div>
               <div className="mt-7 flex flex-col gap-4 border-t border-[var(--color-forest)]/18 pt-5 transition duration-300 group-hover:-translate-y-1 xl:flex-row xl:items-start xl:justify-between">
                 <div>
-                  <h3 className="font-serif text-4xl leading-none text-[var(--color-forest)]">
+                  <h3 className="font-serif text-3xl leading-none text-[var(--color-forest)]">
                     {dish.name}
                   </h3>
                   <p className="mt-3 max-w-xs text-sm leading-6 text-[var(--color-muted)]">
                     {dish.description}
                   </p>
                 </div>
-                <p className="shrink-0 font-serif text-3xl text-[var(--color-bordeaux)]">
+                <p className="shrink-0 font-serif text-2xl text-[var(--color-bordeaux)]">
                   {dish.price}
                 </p>
               </div>
