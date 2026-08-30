@@ -251,6 +251,41 @@ body {
     background: var(--color-gold);
     border: 2px solid #fbf7ef;
   }
+
+  .reservation-modal-scroll {
+    scrollbar-color: var(--color-gold) rgba(31, 52, 40, 0.07);
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
+  }
+
+  .reservation-modal-scroll::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .reservation-modal-scroll::-webkit-scrollbar-track {
+    background:
+      linear-gradient(
+        90deg,
+        transparent 0,
+        transparent 3px,
+        rgba(31, 52, 40, 0.08) 3px,
+        rgba(31, 52, 40, 0.08) 7px,
+        transparent 7px
+      );
+  }
+
+  .reservation-modal-scroll::-webkit-scrollbar-thumb {
+    background:
+      linear-gradient(180deg, #d0b579, var(--color-gold) 48%, #8f6f39);
+    border: 2px solid #fbf7ef;
+    border-radius: 999px;
+    box-shadow: inset 0 0 0 1px rgba(31, 52, 40, 0.12);
+  }
+
+  .reservation-modal-scroll::-webkit-scrollbar-thumb:hover {
+    background:
+      linear-gradient(180deg, #dfc88e, #b89b66 46%, #76582b);
+  }
 }
 
 @keyframes fade-up {

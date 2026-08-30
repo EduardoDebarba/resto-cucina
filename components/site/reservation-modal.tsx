@@ -1,7 +1,7 @@
 'use client';
 
 import { CalendarDays, Clock, Mail, Phone, Users, X } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 export const RESERVATION_MODAL_EVENT = 'resto-cucina:open-reservation-modal';
 
@@ -36,6 +36,15 @@ export function ReservationModal() {
   const [isConfirmed, setIsConfirmed] = useState(false);
   const [reservation, setReservation] = useState<ReservationForm>(initialReservation);
 
+  const closeModal = useCallback(() => {
+    setIsOpen(false);
+
+    if (isConfirmed) {
+      setReservation(initialReservation);
+      setIsConfirmed(false);
+    }
+  }, [isConfirmed]);
+
   useEffect(() => {
     const handleOpen = () => {
       setIsOpen(true);
@@ -56,7 +65,7 @@ export function ReservationModal() {
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
-        setIsOpen(false);
+        closeModal();
       }
     };
 
@@ -65,7 +74,7 @@ export function ReservationModal() {
       document.body.style.overflow = previousOverflow;
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [isOpen]);
+  }, [closeModal, isOpen]);
 
   if (!isOpen) {
     return null;
@@ -85,7 +94,7 @@ export function ReservationModal() {
       aria-modal="true"
       className="fixed inset-0 z-[100] m-0 flex h-full max-h-none w-full max-w-none items-center justify-center border-0 bg-[rgba(18,18,16,0.74)] px-4 py-6 backdrop-blur-sm"
     >
-      <div className="max-h-[92svh] w-full max-w-3xl overflow-y-auto bg-[#fbf7ef] p-5 text-[var(--color-ink)] shadow-[0_28px_90px_rgba(0,0,0,0.34)] sm:p-7">
+      <div className="reservation-modal-scroll max-h-[92svh] w-full max-w-3xl overflow-y-auto bg-[#fbf7ef] p-5 text-[var(--color-ink)] shadow-[0_28px_90px_rgba(0,0,0,0.34)] sm:p-7">
         <div className="flex items-start justify-between gap-5 border-b border-[var(--color-forest)]/12 pb-5">
           <div>
             <p className="eyebrow text-[var(--color-bordeaux)]">Reserva</p>
@@ -103,7 +112,7 @@ export function ReservationModal() {
           <button
             type="button"
             aria-label="Fechar reserva"
-            onClick={() => setIsOpen(false)}
+            onClick={closeModal}
             className="inline-flex h-11 w-11 shrink-0 items-center justify-center border border-[var(--color-forest)]/20 text-[var(--color-forest)] transition hover:border-[var(--color-bordeaux)] hover:bg-[var(--color-bordeaux)] hover:text-[var(--color-cream)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-gold)]"
           >
             <X className="h-5 w-5" />
@@ -238,7 +247,7 @@ export function ReservationModal() {
           <div className="flex flex-col-reverse gap-3 border-t border-[var(--color-forest)]/12 pt-5 sm:flex-row sm:justify-end">
             <button
               type="button"
-              onClick={() => setIsOpen(false)}
+              onClick={closeModal}
               className="inline-flex min-h-12 items-center justify-center border border-[var(--color-forest)]/25 px-6 py-3 text-[11px] font-bold uppercase tracking-[0.18em] text-[var(--color-forest)] transition hover:bg-[var(--color-forest)] hover:text-[var(--color-cream)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-gold)]"
             >
               Fechar
