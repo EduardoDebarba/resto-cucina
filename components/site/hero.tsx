@@ -1,6 +1,7 @@
 import { ChevronDown } from 'lucide-react';
 import { images } from '@/lib/site-content';
 import { SiteButton } from './button';
+import { ReservationButton } from './reservation-button';
 
 export function Hero() {
   return (
@@ -28,7 +29,7 @@ export function Hero() {
             história.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <SiteButton href="#reservations">Reservar uma mesa</SiteButton>
+            <ReservationButton>Reservar uma mesa</ReservationButton>
             <SiteButton href="#menu" variant="outline">
               Conhecer o menu
             </SiteButton>

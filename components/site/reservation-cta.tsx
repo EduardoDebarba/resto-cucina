@@ -1,6 +1,6 @@
 import { Clock } from 'lucide-react';
 import { images } from '@/lib/site-content';
-import { SiteButton } from './button';
+import { ReservationButton } from './reservation-button';
 
 export function ReservationCTA() {
   return (
@@ -25,7 +25,7 @@ export function ReservationCTA() {
             Viva o acolhimento, os sabores e as tradições da Itália.
           </p>
           <div className="mt-10 flex flex-col gap-8 sm:flex-row sm:items-center">
-            <SiteButton href="#contact">Reservar uma mesa</SiteButton>
+            <ReservationButton>Reservar uma mesa</ReservationButton>
             <div className="flex items-start gap-4 border-l border-[var(--color-gold)]/60 pl-5">
               <Clock className="mt-1 h-5 w-5 text-[var(--color-gold)]" />
               <p className="text-sm leading-7 text-[var(--color-cream)]/76">

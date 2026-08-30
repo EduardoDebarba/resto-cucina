@@ -7,6 +7,7 @@ import { Footer } from '@/components/site/footer';
 import { Gallery } from '@/components/site/gallery';
 import { Location } from '@/components/site/location';
 import { MenuPreview } from '@/components/site/menu-preview';
+import { ReservationModal } from '@/components/site/reservation-modal';
 import { ReservationCTA } from '@/components/site/reservation-cta';
 import { SignatureDishes } from '@/components/site/signature-dishes';
 import { StorySection } from '@/components/site/story-section';
@@ -30,6 +31,7 @@ export default function Home() {
         <Location />
       </main>
       <Footer />
+      <ReservationModal />
     </>
   );
 }

@@ -2,7 +2,7 @@
 
 import { Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import { SiteButton } from './button';
+import { ReservationButton } from './reservation-button';
 
 const navItems = [
   { label: 'Início', href: '#home' },
@@ -58,12 +58,11 @@ export function Header() {
         </div>
 
         <div className="hidden lg:block">
-          <SiteButton
-            href="#reservations"
+          <ReservationButton
             variant={isScrolled ? 'secondary' : 'primary'}
           >
             Reservar uma mesa
-          </SiteButton>
+          </ReservationButton>
         </div>
 
         <button
@@ -96,14 +95,13 @@ export function Header() {
                   <span className="h-px w-10 bg-[var(--color-gold)]" />
                 </a>
               ))}
-              <SiteButton
-                href="#reservations"
+              <ReservationButton
                 variant="secondary"
                 className="mt-4 w-full"
                 onClick={() => setIsOpen(false)}
               >
                 Reservar uma mesa
-              </SiteButton>
+              </ReservationButton>
             </div>
           </div>
         </div>
