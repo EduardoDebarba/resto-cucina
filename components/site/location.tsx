@@ -19,7 +19,7 @@ export function Location() {
                   Resto Cucina
                 </strong>
                 <br />
-                Av. Borges de Medeiros, 2480
+                Av. Borges de Medeiros, 0000
                 <br />
                 Gramado, RS
               </p>
