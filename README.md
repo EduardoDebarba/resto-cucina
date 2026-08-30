@@ -84,19 +84,6 @@ npm run format
 
 Formata os arquivos do projeto.
 
-## Deploy no GitHub Pages
-
-O projeto ja possui um workflow em `.github/workflows/deploy.yml`.
-
-Para publicar:
-
-1. Va em **Settings > Pages** no repositorio do GitHub.
-2. Em **Source**, selecione **GitHub Actions**.
-3. Envie uma alteracao para a branch `main`.
-4. Aguarde a execucao do workflow na aba **Actions**.
-
-O workflow constroi o projeto, renderiza a pagina principal e publica a pasta estatica correta para o GitHub Pages.
-
 ## Estrutura principal
 
 ```text
@@ -118,20 +105,6 @@ public/
   hero-casa-bellini-clean.png
 .github/workflows/
   deploy.yml
-```
-
-## Personalizacao de conteudo
-
-Os principais textos, itens do menu, imagens, galeria e avaliacoes ficam em:
-
-```text
-lib/site-content.ts
-```
-
-As secoes visuais do site ficam em:
-
-```text
-components/site/
 ```
 
 ## Observacao
