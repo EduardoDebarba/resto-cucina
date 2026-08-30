@@ -18,7 +18,7 @@ export function StorySection() {
           </h2>
           <p className="mt-7 text-base leading-8 text-[var(--color-cream)]/78">
             O que nasceu em torno de uma mesa familiar tornou-se um restaurante
-            em Milão marcado por molhos de domingo, massas frescas e o ritmo
+            em Gramado marcado por molhos de domingo, massas frescas e o ritmo
             generoso da hospitalidade italiana.
           </p>
         </div>

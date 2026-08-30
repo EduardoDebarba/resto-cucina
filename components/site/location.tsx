@@ -19,9 +19,9 @@ export function Location() {
                   Resto Cucina
                 </strong>
                 <br />
-                Via Toscana, 24
+                Av. Borges de Medeiros, 2480
                 <br />
-                Milão, Itália
+                Gramado, RS
               </p>
             </div>
             <div className="flex gap-4">
@@ -73,7 +73,7 @@ export function Location() {
           <div className="absolute left-[56%] top-[42%] h-5 w-5 -translate-x-1/2 -translate-y-1/2 border-2 border-[var(--color-cream)] bg-[var(--color-bordeaux)] shadow-[0_0_0_12px_rgba(184,155,102,0.18)]" />
           <div className="relative z-10 flex h-full min-h-[452px] flex-col justify-between border border-[var(--color-cream)]/18 p-6 sm:p-8">
             <div>
-              <p className="eyebrow text-[var(--color-gold)]">Centro de Milão</p>
+              <p className="eyebrow text-[var(--color-gold)]">Centro de Gramado</p>
               <p className="mt-4 max-w-sm font-serif text-3xl leading-tight">
                 Um canto tranquilo para luz de velas, massa e Barolo.
               </p>

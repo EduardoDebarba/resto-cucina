@@ -113,7 +113,7 @@ export function MenuPreview() {
         <dialog
           open
           aria-labelledby="full-menu-title"
-          className="fixed inset-0 z-[90] grid place-items-center bg-[var(--color-ink)]/82 p-4 backdrop-blur-sm"
+          className="fixed inset-0 z-[90] m-0 grid h-dvh w-dvw max-h-none max-w-none place-items-center bg-[var(--color-ink)]/82 p-4 backdrop-blur-sm"
         >
           <div className="relative max-h-[88vh] w-full max-w-5xl overflow-hidden bg-[#fbf7ef] text-[var(--color-ink)] shadow-[0_30px_90px_rgba(18,18,16,0.42)]">
             <div className="flex items-start justify-between gap-6 border-b border-[var(--color-forest)]/12 px-6 py-6 sm:px-8">
