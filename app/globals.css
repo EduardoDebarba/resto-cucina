@@ -223,6 +223,24 @@ body {
   .menu-tabs-scroll::-webkit-scrollbar {
     display: none;
   }
+
+  .full-menu-scroll {
+    scrollbar-color: var(--color-gold) rgba(31, 52, 40, 0.08);
+    scrollbar-width: thin;
+  }
+
+  .full-menu-scroll::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .full-menu-scroll::-webkit-scrollbar-track {
+    background: rgba(31, 52, 40, 0.08);
+  }
+
+  .full-menu-scroll::-webkit-scrollbar-thumb {
+    background: var(--color-gold);
+    border: 2px solid #fbf7ef;
+  }
 }
 
 @keyframes fade-up {
