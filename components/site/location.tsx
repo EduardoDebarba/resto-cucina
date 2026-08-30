@@ -1,6 +1,10 @@
 import { Clock, Mail, MapPin, Phone } from 'lucide-react';
 
-const socialLinks = ['Instagram', 'Facebook', 'TripAdvisor'];
+const socialLinks = [
+  { label: 'Instagram', href: 'https://www.instagram.com/' },
+  { label: 'Facebook', href: 'https://www.facebook.com/' },
+  { label: 'TripAdvisor', href: 'https://www.tripadvisor.com.br/' },
+];
 
 export function Location() {
   return (
@@ -51,11 +55,13 @@ export function Location() {
           <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3">
             {socialLinks.map((link) => (
               <a
-                key={link}
-                href="#home"
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
                 className="text-[11px] font-bold uppercase tracking-[0.18em] text-[var(--color-forest)] transition hover:text-[var(--color-bordeaux)]"
               >
-                {link}
+                {link.label}
               </a>
             ))}
           </div>

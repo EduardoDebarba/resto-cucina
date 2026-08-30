@@ -3,6 +3,41 @@
 import { useState } from 'react';
 
 const links = ['Menu', 'Reservas', 'Sobre', 'Galeria', 'Contato'];
+const socialLinks = [
+  { label: 'Instagram', href: 'https://www.instagram.com/', icon: InstagramIcon },
+  { label: 'Facebook', href: 'https://www.facebook.com/', icon: FacebookIcon },
+  { label: 'TripAdvisor', href: 'https://www.tripadvisor.com.br/', icon: TripAdvisorIcon },
+];
+
+function InstagramIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4" fill="none">
+      <rect x="5" y="5" width="14" height="14" rx="4" stroke="currentColor" strokeWidth="1.8" />
+      <circle cx="12" cy="12" r="3.2" stroke="currentColor" strokeWidth="1.8" />
+      <circle cx="16.4" cy="7.6" r="1" fill="currentColor" />
+    </svg>
+  );
+}
+
+function FacebookIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor">
+      <path d="M13.7 20v-7h2.4l.4-2.8h-2.8V8.5c0-.8.2-1.3 1.4-1.3h1.5V4.7c-.7-.1-1.4-.1-2.1-.1-2.2 0-3.7 1.3-3.7 3.8v1.8H8.4V13h2.4v7h2.9Z" />
+    </svg>
+  );
+}
+
+function TripAdvisorIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="none">
+      <path d="M4.5 8.7 2.8 6.6h4.6A12 12 0 0 1 12 5.8c1.7 0 3.2.3 4.6.8h4.6l-1.7 2.1c.7.8 1.1 1.8 1.1 2.9a4.6 4.6 0 0 1-8.2 2.8L12 16l-.4-1.6a4.6 4.6 0 0 1-8.2-2.8c0-1.1.4-2.1 1.1-2.9Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+      <circle cx="8" cy="11.6" r="2" stroke="currentColor" strokeWidth="1.5" />
+      <circle cx="16" cy="11.6" r="2" stroke="currentColor" strokeWidth="1.5" />
+      <circle cx="8" cy="11.6" r=".6" fill="currentColor" />
+      <circle cx="16" cy="11.6" r=".6" fill="currentColor" />
+    </svg>
+  );
+}
 
 export function Footer() {
   const [email, setEmail] = useState('');
@@ -43,27 +78,21 @@ export function Footer() {
             ))}
           </nav>
           <div className="mt-10 flex gap-3">
-            <a
-              href="#home"
-              aria-label="Instagram"
-              className="inline-flex h-10 w-10 items-center justify-center border border-[var(--color-cream)]/18 transition hover:border-[var(--color-gold)] hover:text-[var(--color-gold)]"
-            >
-              IG
-            </a>
-            <a
-              href="#home"
-              aria-label="Facebook"
-              className="inline-flex h-10 w-10 items-center justify-center border border-[var(--color-cream)]/18 transition hover:border-[var(--color-gold)] hover:text-[var(--color-gold)]"
-            >
-              FB
-            </a>
-            <a
-              href="#home"
-              aria-label="TripAdvisor"
-              className="inline-flex h-10 w-10 items-center justify-center border border-[var(--color-cream)]/18 text-[10px] font-bold transition hover:border-[var(--color-gold)] hover:text-[var(--color-gold)]"
-            >
-              TA
-            </a>
+            {socialLinks.map((link) => {
+              const Icon = link.icon;
+              return (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  aria-label={link.label}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex h-10 w-10 items-center justify-center border border-[var(--color-cream)]/18 text-[10px] font-bold transition hover:border-[var(--color-gold)] hover:text-[var(--color-gold)]"
+                >
+                  <Icon />
+                </a>
+              );
+            })}
           </div>
         </div>
 
