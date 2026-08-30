@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import { Cormorant_Garamond, Manrope } from 'next/font/google';
 import './globals.css';
 
+const isGitHubPages = process.env.GITHUB_PAGES === 'true';
+const assetBasePath = isGitHubPages ? '/resto-cucina' : '';
+
 const cormorant = Cormorant_Garamond({
   variable: '--font-cormorant',
   subsets: ['latin'],
@@ -19,7 +22,7 @@ export const metadata: Metadata = {
   description:
     'Viva a cozinha italiana autêntica, massas artesanais e uma hospitalidade atemporal no Resto Cucina.',
   icons: {
-    icon: '/favicon.svg',
+    icon: `${assetBasePath}/favicon.svg`,
   },
   openGraph: {
     title: 'Resto Cucina | Cozinha italiana autêntica',
@@ -27,7 +30,7 @@ export const metadata: Metadata = {
       'Viva a cozinha italiana autêntica, massas artesanais e uma hospitalidade atemporal no Resto Cucina.',
     images: [
       {
-        url: '/og.png',
+        url: `${assetBasePath}/og.png`,
         width: 1600,
         height: 900,
         alt: 'Preview social do Resto Cucina com massa, vinho e luz de velas',
@@ -39,7 +42,7 @@ export const metadata: Metadata = {
     title: 'Resto Cucina | Cozinha italiana autêntica',
     description:
       'Viva a cozinha italiana autêntica, massas artesanais e uma hospitalidade atemporal no Resto Cucina.',
-    images: ['/og.png'],
+    images: [`${assetBasePath}/og.png`],
   },
 };
 

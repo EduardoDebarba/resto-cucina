@@ -1,5 +1,5 @@
 export const images = {
-  hero: '/hero-casa-bellini-clean.png',
+  hero: 'hero-casa-bellini-clean.png',
   aboutChef:
     'https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1200&q=85',
   aboutPasta:
