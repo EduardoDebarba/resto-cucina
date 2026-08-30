@@ -61,32 +61,24 @@ export function Location() {
           </div>
         </div>
 
-        <div className="reveal relative min-h-[500px] overflow-hidden bg-[var(--color-forest)] p-6 text-[var(--color-cream)] sm:p-10">
-          <div className="absolute inset-0 opacity-55">
-            <div className="absolute left-[12%] top-0 h-full w-px bg-[var(--color-gold)]/28" />
-            <div className="absolute left-[37%] top-0 h-full w-px bg-[var(--color-gold)]/20" />
-            <div className="absolute left-[64%] top-0 h-full w-px bg-[var(--color-gold)]/24" />
-            <div className="absolute left-0 top-[18%] h-px w-full bg-[var(--color-gold)]/20" />
-            <div className="absolute left-0 top-[47%] h-px w-full bg-[var(--color-gold)]/25" />
-            <div className="absolute left-0 top-[76%] h-px w-full bg-[var(--color-gold)]/18" />
-          </div>
-          <div className="absolute left-[56%] top-[42%] h-5 w-5 -translate-x-1/2 -translate-y-1/2 border-2 border-[var(--color-cream)] bg-[var(--color-bordeaux)] shadow-[0_0_0_12px_rgba(184,155,102,0.18)]" />
-          <div className="relative z-10 flex h-full min-h-[452px] flex-col justify-between border border-[var(--color-cream)]/18 p-6 sm:p-8">
-            <div>
-              <p className="eyebrow text-[var(--color-gold)]">Centro de Gramado</p>
-              <p className="mt-4 max-w-sm font-serif text-3xl leading-tight">
-                Um canto tranquilo para luz de velas, massa e Barolo.
-              </p>
-            </div>
-            <div className="max-w-sm bg-[var(--color-cream)] p-5 text-[var(--color-ink)]">
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--color-bordeaux)]">
-                Resto Cucina
-              </p>
-              <p className="mt-2 text-sm leading-6 text-[var(--color-muted)]">
-                Mapa visual estático preparado para futura integração com mapa
-                real quando as credenciais estiverem disponíveis.
-              </p>
-            </div>
+        <div className="reveal relative min-h-[500px] overflow-hidden bg-[var(--color-forest)] p-3 text-[var(--color-cream)] sm:p-4">
+          <iframe
+            title="Mapa do centro de Gramado, RS"
+            src="https://www.google.com/maps?q=Centro%20de%20Gramado%20RS&output=embed"
+            className="h-[500px] w-full border-0 grayscale-[18%] sepia-[10%]"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+          <div className="pointer-events-none absolute inset-3 border border-[var(--color-cream)]/18 sm:inset-4" />
+          <div className="absolute bottom-7 left-7 max-w-sm bg-[var(--color-cream)] p-5 text-[var(--color-ink)] shadow-[0_20px_50px_rgba(18,18,16,0.24)] sm:bottom-8 sm:left-8">
+            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--color-bordeaux)]">
+              Centro de Gramado
+            </p>
+            <p className="mt-2 text-sm leading-6 text-[var(--color-muted)]">
+              Av. Borges de Medeiros, 0000
+              <br />
+              Gramado, RS
+            </p>
           </div>
         </div>
       </div>
