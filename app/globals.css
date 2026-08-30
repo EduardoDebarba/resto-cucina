@@ -146,6 +146,16 @@ body {
     min-width: 320px;
     overflow-x: hidden;
   }
+
+  button,
+  [role='button'],
+  a,
+  summary,
+  input[type='button'],
+  input[type='submit'],
+  input[type='reset'] {
+    cursor: pointer;
+  }
 }
 
 @layer components {
