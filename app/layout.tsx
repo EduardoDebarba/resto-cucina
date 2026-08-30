@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: 'Resto Cucina | Cozinha italiana autêntica',
   description:
     'Viva a cozinha italiana autêntica, massas artesanais e uma hospitalidade atemporal no Resto Cucina.',
+  icons: {
+    icon: '/favicon.svg',
+  },
   openGraph: {
     title: 'Resto Cucina | Cozinha italiana autêntica',
     description:
