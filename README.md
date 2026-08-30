@@ -2,10 +2,6 @@
 
 Landing page premium para um restaurante italiano ficticio em Gramado, RS. O projeto apresenta a experiencia do Resto Cucina com visual sofisticado, secoes institucionais, menu interativo, galeria, avaliacoes, mapa e fluxo de reserva simulado.
 
-## Descricao curta para o GitHub
-
-Landing page premium de restaurante italiano em React/Vinext, com menu interativo, galeria, mapa e modal de reserva.
-
 ## Preview
 
 Site publicado pelo GitHub Pages:
