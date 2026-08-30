@@ -1,0 +1,75 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static site
+        run: npm run build
+        env:
+          GITHUB_PAGES: 'true'
+
+      - name: Render GitHub Pages artifact
+        shell: bash
+        run: |
+          npm run start -- --port 8787 > /tmp/resto-cucina.log 2>&1 &
+          for attempt in {1..60}; do
+            if curl --fail --silent --output /tmp/resto-cucina.html http://127.0.0.1:8787/resto-cucina/; then
+              break
+            fi
+            sleep 1
+          done
+
+          test -s /tmp/resto-cucina.html
+          rm -rf github-pages
+          mkdir -p github-pages
+          cp /tmp/resto-cucina.html github-pages/index.html
+          cp -R dist/client/resto-cucina/_next github-pages/_next
+          cp dist/client/favicon.svg github-pages/favicon.svg
+          cp dist/client/hero-casa-bellini-clean.png github-pages/hero-casa-bellini-clean.png
+          cp dist/client/hero-casa-bellini.png github-pages/hero-casa-bellini.png
+          cp dist/client/og.png github-pages/og.png
+          touch github-pages/.nojekyll
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: github-pages
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

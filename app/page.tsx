@@ -13,6 +13,8 @@ import { SignatureDishes } from '@/components/site/signature-dishes';
 import { StorySection } from '@/components/site/story-section';
 import { Testimonials } from '@/components/site/testimonials';
 
+export const dynamic = 'force-static';
+
 export default function Home() {
   return (
     <>
